@@ -8,30 +8,30 @@
 include_once("blipPHP.php");
 
 /** Create blipPHP object. **/
-$blipPHP = new blipPHP("username", "password");
+$blipPHP = new blipPHP("thecharismproject", "char1sm");
 
 /** Upload file **/
-$respond = $blipPHP->upload("videos/blip_test_footage.mp4", "title", "description", "public");
-print_r($respond);
+//$respond = $blipPHP->upload("videos/blip_test_footage.mp4", "title", "description", "public");
+//print_r($respond);
 
-/** Modify file **/
-$respond = $blipPHP->modify(1234, "title", "description", "public");
+/*/** Modify file **/
+//$respond = $blipPHP->modify(1234, "title", "description", "public");
+//print_r($respond);
+//
+///** replace file **/
+//$respond = $blipPHP->replaceFile(6424561, "videos/blip_test_footage.mp4");
+//print_r($respond);
+//
+///** Change file privacy **/
+///** I believe this only works for pro accounts */
+//$respond = $blipPHP->setPrivacy(1234, 'private');
+//print_r($respond);
+//
+///** Delete **/
+$respond = $blipPHP->delete(6430256, "reason");
 print_r($respond);
-
-/** replace file **/
-$respond = $blipPHP->replaceFile(6424561, "videos/blip_test_footage.mp4");
-print_r($respond);
-
-/** Change file privacy **/
-/** I believe this only works for pro accounts */
-$respond = $blipPHP->setPrivacy(1234, 'private');
-print_r($respond);
-
-/** Delete **/
-$respond = $blipPHP->delete(1234, "reason");
-print_r($respond);
-
-/** Getting information **/
-$respond = $blipPHP->info(1234);
-print_r($respond);
+//
+///** Getting information **/
+//$respond = $blipPHP->info($respond->payload->asset->item_id);
+//print_r($respond);
 ?>
